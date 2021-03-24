@@ -33,6 +33,8 @@ Test request run `curl http://localhost:3000/api/v1/books`
 15. Add `gem 'factory_bot_rails'`and
   `gem 'rspec-rails'`, run `bundle`
   set up rspec and create factories. To test run `rspec`
+16. Add Author model, remove 'author' from Book model, add associations
+
 
 
 This README would normally document whatever steps are necessary to get the
