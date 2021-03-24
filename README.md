@@ -1,4 +1,8 @@
 # README
+## Api-app
+### built with
+- Rails 6.1.3
+- postqresql DB
 
 1. `rails new aapi-app --api -d postgresql`
 2. `rails db:create`
