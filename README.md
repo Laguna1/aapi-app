@@ -20,6 +20,8 @@ run test for checking validations `curl --header "Content-Type: application/json
 responce: {"title":["is too short (minimum is 3 characters)"],"author":["is too short (minimum is 3 characters)"]}
 13. Request to delete book(id:1) `curl --header "Content-Type: application/json" --request DELETE http://localhost:3000/books/1 -v`
 than `rails c` `Book.find(1)` => ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=1)exit
+14. Add namespaces 'api' and 'v1' in routes.rb
+Test request run `curl http://localhost:3000/api/v1/books`
 
 
 This README would normally document whatever steps are necessary to get the
