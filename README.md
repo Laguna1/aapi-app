@@ -6,11 +6,15 @@
 3. `rails s` and check from another terminal `curl http://localhost:3000/books` for checking root callback
 5. Create Book controller `rails g controller Books index`
 6. run `curl http://localhost:3000/books -v` for details
-7. rails g model Book title author and `rails db:migrate`
+7. `rails g model Book title author` and `rails db:migrate`
 8. `rails c` and add books
 `Book.create(author: "Oksana", title: "I like the adventures!")`
 check $ curl http://localhost:3000/books
 [{"id":1,"title":"I like the adventures!","author":"Oksana","created_at":"2021-03-24T15:11:46.291Z","updated_at":"2021-03-24T15:11:46.291Z"}]
+9. Add new root for create action and method
+check new routes `rails routes | grep book`
+10. update curl request`curl --request POST http://localhost:3000/books -v`
+11. To add new book `curl --header "Content-Type: application/json" --request POST --data '{"author": "James", "title": "A book"}' http://localhost:3000/books -v`
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
