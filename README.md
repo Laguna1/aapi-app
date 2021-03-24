@@ -15,6 +15,9 @@ check $ curl http://localhost:3000/books
 check new routes `rails routes | grep book`
 10. update curl request`curl --request POST http://localhost:3000/books -v`
 11. To add new book `curl --header "Content-Type: application/json" --request POST --data '{"author": "James", "title": "A book"}' http://localhost:3000/books -v`
+12. Add Book model validations
+run test for checking validations `curl --header "Content-Type: application/json" --request POST --data '{"author": "J.", "title": "ML"}' http://localhost:3000/books -v`
+responce: {"title":["is too short (minimum is 3 characters)"],"author":["is too short (minimum is 3 characters)"]}
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
