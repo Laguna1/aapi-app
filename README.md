@@ -1,8 +1,12 @@
 # README
 ## Api-app
+
 ### built with
+
+- ruby '2.7.2'
 - Rails 6.1.3
-- postqresql DB
+- postqresql 
+- RSPEC
 
 1. `rails new aapi-app --api -d postgresql`
 2. `rails db:create`
@@ -26,6 +30,9 @@ responce: {"title":["is too short (minimum is 3 characters)"],"author":["is too 
 than `rails c` `Book.find(1)` => ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=1)exit
 14. Add namespaces 'api' and 'v1' in routes.rb
 Test request run `curl http://localhost:3000/api/v1/books`
+15. Add `gem 'factory_bot_rails'`and
+  `gem 'rspec-rails'`, run `bundle`
+  set up rspec and create factories. To test run `rspec`
 
 
 This README would normally document whatever steps are necessary to get the
