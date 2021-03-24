@@ -34,6 +34,13 @@ Test request run `curl http://localhost:3000/api/v1/books`
   `gem 'rspec-rails'`, run `bundle`
   set up rspec and create factories. To test run `rspec`
 16. Add Author model, remove 'author' from Book model, add associations
+17. Implement BooksRepresenter, restart server
+18. Delete throw console
+Book.select {|book| book.author_id.nil? }
+run the curl request for checking `curl http://localhost:3000/api/v1/books`
+the result - [{"id":5,"title":"The philosopher Stone","author_first_name":"JK","author_last_name":"Rowling","author_age":55},{"id":6,"title":"The Chamber of Secrets","author_first_name":"JK","author_last_name":"Rowling","author_age":55}]
+inplement author_name
+
 
 
 
